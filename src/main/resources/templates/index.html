@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Home | Login Functionality Project</title>
+	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	<link type="stylesheet" src="style.css" />
+</head>
+
+<body style="background-color:#eee3ea;">
+	<div>
+		<!-- Image and text -->
+
+		<nav class="navbar navbar-dark bg-dark">
+			<a class="navbar-brand" href="/">
+				<img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" width="30" height="30"
+					class="d-inline-block align-top" alt="">
+				Registration Login Portal
+			</a>
+		</nav>
+		<div class="container text-center" style="margin-top:5vh;">
+			<h1>Welcome to Portal</h1>
+			<div class="container"
+				style="border: 0px solid; padding:10px; margin-top:10vh; width:200px; box-shadow: 5px; background-color: aliceblue; border-radius: 5px; border-color: cadetblue;">
+				<div style="margin:1vh"><button class="btn btn-primary"><a th:href="@{/register}"
+							style="color: white;">Register</a></button>
+				</div>
+				<div style="margin:1vh"><button class="btn btn-success"><a th:href="@{/login}"
+							style="color: white;">Login</a></button></div>
+			</div>
+		</div>
+		<div class="container"
+			style="border: 0px solid; padding:10px; margin-top:15vh; width:400px; box-shadow: 5px; background-color: aliceblue; border-radius: 5px; border-color: cadetblue;">
+			<div>
+				<h3 class="display-5">Frameworks Used</h3>
+				<ul class="list-unstyled">
+					<li>Spring Boot</li>
+					<li>Spring Security</li>
+					<li>MySQL</li>
+					<li>Spring Data JPA</li>
+					<li>Sping Web</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
