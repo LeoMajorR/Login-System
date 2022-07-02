@@ -8,7 +8,7 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>net.codejava</groupId>
+	<groupId>login.portal</groupId>
 	<artifactId>SpringBootRegistrationLogin</artifactId>
 	<version>1.0</version>
 	<name>SpringBootRegistrationLogin</name>
