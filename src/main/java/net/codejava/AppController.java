@@ -61,6 +61,22 @@ public class AppController {
 			@RequestParam(name = "profession", required = false) String profession,
 			@RequestParam(name = "email", required = false) String email,
 			@RequestParam(name = "mobileNumber", required = false) String mobileNumber, Model model) {
+		// code for if name="", then name is null
+		if (name == "") {
+			name = null;
+		}
+		if (profession == "") {
+			profession = null;
+		}
+		if (email == "") {
+			email = null;
+		}
+		if (mobileNumber == "") {
+			mobileNumber = null;
+		}
+		if (age == null) {
+			age = null;
+		}
 		List<User> listUsers = userRepo.customQuery(name, age, profession, email, mobileNumber);
 		model.addAttribute("listUsers", listUsers);
 
