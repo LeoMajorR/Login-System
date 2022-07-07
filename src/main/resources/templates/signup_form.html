@@ -22,10 +22,44 @@
 			<h1>User Registration - Sign Up</h1>
 		</div>
 		<div class="container"
-			style="border: 0px solid; padding:5px; margin-top:10vh; width:600px; box-shadow: 5px; background-color: aliceblue; border-radius: 5px; border-color: cadetblue;">
+			style="border: 0px solid; padding:5px; margin-top:10vh; width:800px; height: 450px; box-shadow: 5px; background-color: aliceblue; border-radius: 5px; border-color: cadetblue;">
 			<form th:action="@{/process_register}" th:object="${user}" method="post"
-				style="max-width: 600px; margin: 15vh auto;">
+				style="max-width: 700px; margin: 7vh auto;">
 				<div class="m-3">
+					<div class="form-group form-row">
+						<label class="col-4 col-form-label">First Name: </label>
+						<div class="col-3">
+							<input type="text" th:field="*{firstName}" class="form-control" required minlength="2"
+								maxlength="20" />
+						</div>
+						<label class="col-2 col-form-label">Last Name: </label>
+						<div class="col-3">
+							<input type="text" th:field="*{lastName}" class="form-control" required minlength="2"
+								maxlength="20" />
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label class="col-4 col-form-label">Occupation </label>
+						<div class="col-4">
+							<input type="text" th:field="*{occupation}" class="form-control" required minlength="2"
+								maxlength="20" />
+						</div>
+						<label class="col-2 col-form-label">Age </label>
+						<div class="col-2">
+							<input type="number" th:field="*{age}" class="form-control" required minlength="1"
+								maxlength="3"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-4 col-form-label">Mobile Number (+91) </label>
+						<div class="col-8">
+							<input type="number" th:field="*{mobileNumber}" class="form-control" required minlength="2"
+								maxlength="10"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+						</div>
+					</div>
 					<div class="form-group row">
 						<label class="col-4 col-form-label">E-mail: </label>
 						<div class="col-8">
@@ -37,27 +71,18 @@
 						<label class="col-4 col-form-label">Password: </label>
 						<div class="col-8">
 							<input type="password" th:field="*{password}" class="form-control" required minlength="6"
-								maxlength="10" />
+								maxlength="10" id="paswrd" />
 						</div>
 					</div>
-
-					<div class="form-group row">
-						<label class="col-4 col-form-label">First Name: </label>
-						<div class="col-8">
-							<input type="text" th:field="*{firstName}" class="form-control" required minlength="2"
-								maxlength="20" />
-						</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+							onclick="togglePassword()">
+						<label class="form-check-label" for="flexCheckDefault">
+							Show Password
+						</label>
 					</div>
 
-					<div class="form-group row">
-						<label class="col-4 col-form-label">Last Name: </label>
-						<div class="col-8">
-							<input type="text" th:field="*{lastName}" class="form-control" required minlength="2"
-								maxlength="20" />
-						</div>
-					</div>
-
-					<div>
+					<div style="margin-top: 3vh;">
 						<button type="submit" class="btn btn-primary">Sign Up</button>
 					</div>
 				</div>
@@ -65,5 +90,16 @@
 		</div>
 	</div>
 </body>
+
+<script>
+	function togglePassword() {
+		var x = document.getElementById("paswrd");
+		if (x.type === "password") {
+			x.type = "text";
+		} else {
+			x.type = "password";
+		}
+	}
+</script>
 
 </html>

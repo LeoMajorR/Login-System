@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Custom Query | | Login Functionality Project</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:thistle ;">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            Registration Login Portal
+        </a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Custom Query</h3>
+                    </div>
+                    <div class="card-body">
+                        <form th:action="@/occupation/">
+                            <div class="form-group">
+                                <label for="query">Query on basis of Profession</label>
+                                <input type="text" class="form-control" type="hidden" name="proff"
+                                    placeholder="Enter your query">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

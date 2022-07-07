@@ -10,22 +10,31 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "users")
 public class User {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column(nullable = false, unique = true, length = 45)
 	private String email;
-	
+
 	@Column(nullable = false, length = 64)
 	private String password;
-	
+
 	@Column(name = "first_name", nullable = false, length = 20)
 	private String firstName;
-	
+
 	@Column(name = "last_name", nullable = false, length = 20)
 	private String lastName;
+
+	@Column(name = "mobile_number", nullable = false, length = 10)
+	private String mobileNumber;
+
+	@Column(name = "age", nullable = false, length = 3)
+	private int age;
+
+	@Column(name = "Occupation", nullable = false, length = 20)
+	private String occupation;
 
 	public Long getId() {
 		return id;
@@ -35,6 +44,7 @@ public class User {
 		this.id = id;
 	}
 
+	// Email
 	public String getEmail() {
 		return email;
 	}
@@ -43,6 +53,7 @@ public class User {
 		this.email = email;
 	}
 
+	// Password
 	public String getPassword() {
 		return password;
 	}
@@ -51,6 +62,7 @@ public class User {
 		this.password = password;
 	}
 
+	// First Name
 	public String getFirstName() {
 		return firstName;
 	}
@@ -59,6 +71,7 @@ public class User {
 		this.firstName = firstName;
 	}
 
+	// Last Name
 	public String getLastName() {
 		return lastName;
 	}
@@ -66,7 +79,31 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
-	
-	
+
+	// Mobile Number
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
+	// age
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	// Occupation
+	public String getOccupation() {
+		return occupation;
+	}
+
+	public void setOccupation(String occupation) {
+		this.occupation = occupation;
+	}
 }

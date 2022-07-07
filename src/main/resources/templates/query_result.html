@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Custom Query | | Login Functionality Project</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:thistle ;">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            Registration Login Portal
+        </a>
+    </nav>
+    <div class="container text-center">
+        <div>
+            <img src="https://i.ibb.co/rxw0MBf/wel.png" width="300px">
+        </div>
+        <div style="margin-top: 10vh;">
+            <h1>List of Users</h1>
+        </div>
+
+        <div>
+            <table class="table table-striped table-bordered" style="background-color: white;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>User ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                        <th>Profession</th>
+                        <th>Contact Number</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="user: ${listUsers}">
+                        <td th:text="${user.id}">User ID</td>
+                        <td th:text="${user.firstName}">First Name</td>
+                        <td th:text="${user.lastName}">Last Name</td>
+                        <td th:text="${user.age}">Age</td>
+                        <td th:text="${user.occupation}">Profession</td>
+                        <td th:text="${user.mobileNumber}">Contact Number</td>
+                        <td th:text="${user.email}">E-mail</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
