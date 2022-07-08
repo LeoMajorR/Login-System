@@ -17,9 +17,36 @@
 			Registration Login Portal
 		</a>
 	</nav>
-	<div class="container text-center">
+	<!-- <div class="container text-center">
+		<h1 class="display-4">Welcome User <b><span th:text="${user.firstName}"></span></b></h1>
+		<div>
+
+		</div>
 		<h3>You have signed up successfully!</h3>
 		<h4><a th:href="@{/login}">Click here to Login</a></h4>
+	</div> -->
+	<div class="jumbotron text-center">
+		<h2 class="display-5 text-success">Hello <strong><span th:text="${user.firstName}"></strong></span> you have
+			signed up
+			successfully!!!</h2>
+		<hr class="my-4">
+		<h3 class="display-5"> User Details </h3>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<ul class="list-group d-flex text-left">
+					<li class="list-group-item">Name : <span th:text="${user.firstName}"></span>&nbsp;<span
+							th:text="${user.lastName}"></span></li>
+					<li class="list-group-item">Age : <span th:text="${user.age}"></span></li>
+					<li class="list-group-item">Email : <span th:text="${user.email}"></span></li>
+					<li class="list-group-item">Profession : <span th:text="${user.occupation}"></span></li>
+					<li class="list-group-item">Mobile Number : <span th:text="${user.mobileNumber}"></span></li>
+				</ul>
+			</div>
+		</div>
+		<p class="lead mt-2">
+			<a class="btn btn-success btn-lg" th:href="@{/login}" role="button">Sign In</a>
+		</p>
 	</div>
 
 </body>

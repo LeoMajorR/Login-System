@@ -64,12 +64,17 @@ public class AppController {
 		// code for if name="", then name is null
 		if (name == "") {
 			name = null;
+		} else {
+			// add % to the end of name to make it like %name%
+			name = "%" + name + "%";
 		}
 		if (profession == "") {
 			profession = null;
 		}
 		if (email == "") {
 			email = null;
+		} else {
+			email = "%" + email + "%";
 		}
 		if (mobileNumber == "") {
 			mobileNumber = null;
@@ -80,7 +85,7 @@ public class AppController {
 		List<User> listUsers = userRepo.customQuery(name, age, profession, email, mobileNumber);
 		model.addAttribute("listUsers", listUsers);
 
-		return "query_result";
+		return "query";
 	}
 
 	// redirect to error page in case of invalid url
