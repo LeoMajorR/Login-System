@@ -29,12 +29,16 @@
 				<input type="submit" value="Sign Out" style="color: red;" />
 			</form>
 		</div>
-		<div style="margin-top: 10vh;">
+		<div class="container alert alert-success col-md-3 text-center shadow p-3 mb-5 rounded mt-2" role="alert">
+			<Span th:text="${noOfUsers}"> </Span> Users found in Database
+		</div>
+		<div style="margin-top: 5vh;">
 			<h1>List of Users</h1>
 		</div>
 
 		<div>
-			<table class="table table-striped table-bordered" style="background-color: white;">
+			<table class="table table-striped table-bordered shadow p-3 mb-5 bg-white rounded"
+				style="background-color: white;">
 				<thead class="thead-dark">
 					<tr>
 						<th>User ID</th>
