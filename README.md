@@ -20,15 +20,15 @@
 
 #### Home Page
 
-<img src="https://i.ibb.co/3CQPnWw/Screenshot-285.png" alt="Screenshot-285" border="0">
+<img src="https://i.ibb.co/5jPbdG7/Screenshot-296.png" alt="Home" border="0">
 
 #### Sign-UP
 
-<img src="https://i.ibb.co/T24S1Tb/Screenshot-286.png" alt="Screenshot-286" border="0">
+<img src="https://i.ibb.co/TTB3jmj/Screenshot-297.png" alt="Register" border="0">
 
 #### Sign-Up Successful
 
-<img src="https://i.ibb.co/rHMrh0s/Screenshot-287.png" alt="Screenshot-287" border="0">
+<img src="https://i.ibb.co/h2x7qK3/Screenshot-298.png" alt="Register Success" border="0">
 
 #### Sign-In
 
@@ -36,4 +36,16 @@
 
 #### User Page
 
-<img src="https://i.ibb.co/m6XzW9H/Screenshot-289.png" alt="Screenshot-289" border="0">
+<img src="https://i.ibb.co/rQCjGBS/Screenshot-299.png" alt="Screenshot-289" border="0">
+
+#### Custom Queries
+
+<table style="padding:10px, border:5px">
+  <tr>
+    <td> <img src="https://i.ibb.co/LJ1cD4x/Screenshot-300.png"  alt="1" ></td>
+   </tr> 
+   <tr>
+    <td><img src="https://i.ibb.co/Syddc3j/Screenshot-301.png" alt="2"></td>
+  </td>
+  </tr>
+</table>
