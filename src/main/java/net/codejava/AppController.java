@@ -80,7 +80,7 @@ public class AppController {
 			mobileNumber = null;
 		}
 		if (age == null) {
-			age = null;
+			age = 0;
 		}
 		List<User> listUsers = userRepo.customQuery(name, age, profession, email, mobileNumber);
 		model.addAttribute("listUsers", listUsers);

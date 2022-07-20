@@ -22,7 +22,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	 * @param mobileNumber
 	 * @return
 	 */
-	@Query("SELECT u FROM User u WHERE (?1 is null or u.firstName LIKE ?1) AND (?2 is null or u.age = ?2) AND (?3 is null or u.occupation LIKE ?3) AND (?4 is null or u.email LIKE ?4) AND (?5 is null or u.mobileNumber LIKE ?5)")
+	@Query("SELECT u FROM User u WHERE (?1 is null or u.firstName LIKE cast(?1 as string)) AND (?3 is null or u.occupation LIKE cast(?3 as string)) AND (?4 is null or u.email LIKE cast(?4 as string)) AND (?5 is null or u.mobileNumber LIKE cast(?5 as string) AND (?2 = 0 or u.age = ?2))")
 	public List<User> customQuery(String name, Integer age, String profession, String email, String mobileNumber);
 
 }
