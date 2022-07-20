@@ -43,7 +43,7 @@ public class AppController {
 	public String listUsers(Model model) {
 		List<User> listUsers = userRepo.findAll();
 		model.addAttribute("listUsers", listUsers);
-
+		model.addAttribute("noOfUsers", listUsers.size());
 		return "users";
 	}
 
@@ -84,7 +84,12 @@ public class AppController {
 		}
 		List<User> listUsers = userRepo.customQuery(name, age, profession, email, mobileNumber);
 		model.addAttribute("listUsers", listUsers);
-
+		if (listUsers.isEmpty()) {
+			model.addAttribute("message", "No results found");
+		} else {
+			// n results found
+			model.addAttribute("message", listUsers.size() + " results found");
+		}
 		return "query";
 	}
 
